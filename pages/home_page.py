@@ -1,4 +1,3 @@
-from config import BASE_PATH
 from pages.base_page import BasePage
 
 class HomePage(BasePage):
