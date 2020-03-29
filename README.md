@@ -5,7 +5,12 @@ Screen Play Implementation for Automation in Python
 
  * Python 3.x
  * `virtualenv` (optional)
+ * Chrome driver [download link](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+ * Firefox driver [download link](https://github.com/mozilla/geckodriver/releases)
 
+
+### Drivers
+Download the drivers and store into the given `drivers` folder
 
 ### Install dependencies
 
