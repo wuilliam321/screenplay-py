@@ -5,4 +5,5 @@ class HomePage(BasePage):
     
     @staticmethod
     def search_input(driver):
-        return driver.find_element(By.NAME, 'q')
+        locator = (By.NAME, 'q')
+        return BasePage.get_by(driver, locator)
