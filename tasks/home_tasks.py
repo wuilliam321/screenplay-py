@@ -14,9 +14,12 @@ class HomeTasks(object):
 
         numbers = []
         for i, element in enumerate(elements):
-            numbers.append((i, int(element.text)))
+            if element.text != '':
+                numbers.append((i, int(element.text)))
         numbers.sort(key = sortSecond)
         for number in numbers:
             print("clicking on number", elements[number[0]].text)
             Mouse.click(elements[number[0]])
-        
+
+    def check_score(self):
+        return self.home_page.game_score() == "50"

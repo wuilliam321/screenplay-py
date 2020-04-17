@@ -10,8 +10,8 @@ class BasePage(object):
         return self.wait_for(locator)
 
     def wait_for(self, locator):
-        # TODO: make this 5000 value a configurable value
-        WebDriverWait(self.driver, 0).until(
+        # TODO: make this 3 value a configurable value
+        WebDriverWait(self.driver, 5).until(
             lambda driver: self.driver.find_element(*locator))
         return self.driver.find_element(*locator)
 

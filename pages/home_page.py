@@ -3,8 +3,8 @@ from pages.base_page import BasePage
 
 class HomePage(BasePage):
     
-    def game_board(self):
-        locator = (By.ID, 'grid')
+    def game_score(self):
+        locator = (By.ID, 'score')
         return self.get_by(locator)
 
     def numbers_list(self):
