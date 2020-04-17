@@ -19,7 +19,5 @@ class HomeTasks(object):
         numbers.sort(key = sortSecond)
         for number in numbers:
             print("clicking on number", elements[number[0]].text)
+            assert self.home_page.game_score(), elements[number[0]]
             Mouse.click(elements[number[0]])
-
-    def check_score(self):
-        return self.home_page.game_score() == "50"

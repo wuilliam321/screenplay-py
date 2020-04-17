@@ -14,8 +14,6 @@ class ResolveGameTest(unittest.TestCase):
     def test_click_on_all_numbers_asap(self):
         self.home_tasks.click_on_numbers()
         self.home_tasks.click_on_numbers()
-        # assert self.home_tasks.check_score(), "50"
-        time.sleep(10)
 
     def tearDown(self):
         self.driver.close()
