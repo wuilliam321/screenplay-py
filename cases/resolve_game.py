@@ -11,9 +11,13 @@ class ResolveGameTest(unittest.TestCase):
         self.driver.get(BASE_PATH)
         self.home_tasks = HomeTasks(self.driver)
 
-    def test_click_on_all_numbers_asap(self):
-        self.home_tasks.click_on_numbers()
-        self.home_tasks.click_on_numbers()
+    def test_click_on_right_color_as_many_as_possible(self):
+        try:
+            while(self.home_tasks.get_time() > 0):
+                self.home_tasks.click_on_right_color()
+        except:
+            assert self.home_tasks.get_result() > 0, True
+             
 
     def tearDown(self):
         self.driver.close()
