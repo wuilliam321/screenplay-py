@@ -1,8 +1,8 @@
 import unittest
-from cases.search_for_test import SearchForTest
+from cases.resolve_game import ResolveGameTest
 
 if __name__ == "__main__":
-    test_cases = [SearchForTest]
+    test_cases = [ResolveGameTest]
 
     suites = []
     for test_case in test_cases:

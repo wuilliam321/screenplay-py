@@ -1,6 +1,6 @@
 import os
 # Base Url
-BASE_PATH = "http://www.python.org"
+BASE_PATH = "http://zzzscore.com/1to50/en"
 
 # Defines the if headless is enabled/disabled. default: False
 HEADLESS = os.environ.get("HEADLESS", False)

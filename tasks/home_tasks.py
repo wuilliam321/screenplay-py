@@ -1,13 +1,22 @@
 from pages.home_page import HomePage
-from actions.input import Input
+from actions.mouse import Mouse
 
 class HomeTasks(object):
     def __init__(self, driver):
         self.driver = driver
         self.home_page = HomePage(self.driver)
 
-    def search_for(self, text):
-        element = self.home_page.search_input()
-        Input.text(element, text)
-        Input.key_return(element)
+    def click_on_numbers(self):
+        elements = self.home_page.numbers_list()
+
+        def sortSecond(val): 
+            return val[1] 
+
+        numbers = []
+        for i, element in enumerate(elements):
+            numbers.append((i, int(element.text)))
+        numbers.sort(key = sortSecond)
+        for number in numbers:
+            print("clicking on number", elements[number[0]].text)
+            Mouse.click(elements[number[0]])
         
