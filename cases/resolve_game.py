@@ -12,6 +12,7 @@ class ResolveGameTest(unittest.TestCase):
 
     def test_click_on_all_numbers_asap(self):
         self.home_tasks.click_on_numbers()
+        self.home_tasks.click_on_numbers()
         assert True, True
 
     def tearDown(self):
