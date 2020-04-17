@@ -6,13 +6,11 @@ class BasePage(object):
     def __init__(self, driver):
         self.driver = driver
 
-    @staticmethod
-    def get_by(driver, locator):
-        return BasePage.wait_for(driver, locator)
+    def get_by(self, locator):
+        return self.wait_for(locator)
 
-    @staticmethod
-    def wait_for(driver, locator):
+    def wait_for(self, locator):
         # TODO: make this 5000 value a configurable value
-        WebDriverWait(driver, 5000).until(
-            lambda driver: driver.find_element(*locator))
-        return driver.find_element(*locator)
+        WebDriverWait(self.driver, 5000).until(
+            lambda driver: self.driver.find_element(*locator))
+        return self.driver.find_element(*locator)

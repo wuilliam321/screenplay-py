@@ -3,7 +3,6 @@ from pages.base_page import BasePage
 
 class HomePage(BasePage):
     
-    @staticmethod
-    def search_input(driver):
+    def search_input(self):
         locator = (By.NAME, 'q')
-        return BasePage.get_by(driver, locator)
+        return self.get_by(locator)

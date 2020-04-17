@@ -1,5 +1,7 @@
 class WindowTasks(object):
-    @staticmethod
-    def get_title(driver):
-        return driver.title
+    def __init__(self, driver):
+        self.driver = driver
+        
+    def get_title(self):
+        return self.driver.title
         
